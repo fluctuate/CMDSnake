@@ -17,6 +17,5 @@ A "Snake" styled game made completely through python without pygame for Windows 
 * How to create a basic game: drawing/coordinate saving/game ticks.
 
 ## Things to Change/Fix:
-* Make fruit unable to spawn in same location.
 * If possible, find a way to limit the screen shake when clearing window/updating map.
 * Cut down some semi-redundent code.
