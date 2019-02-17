@@ -79,10 +79,19 @@ def displayBoard(boardMap):
         for x in boardMap[y]:
             line += x
         print(line)
+#Puts Fruit into a list to display on board
 def addRandomFruit(horizontal, vertical, fruit, maxfruit):
     fruitDict = dict()
-    fruitDict['x'] = random.randint(1,horizontal-2)
-    fruitDict['y'] = random.randint(0,vertical-1)
+    good = False
+    while good == False:
+        fruitDict['x'] = random.randint(1,horizontal-2)
+        fruitDict['y'] = random.randint(0,vertical-1)
+        failed = False
+        for fruitnum in fruit:
+            if fruit[fruitnum] == fruitDict:
+                failed = True
+        if failed == False:
+            good = True
     for x in range(maxfruit):
         if x not in fruit.keys():
             fruit[x] = fruitDict
